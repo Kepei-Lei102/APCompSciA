@@ -1,11 +1,16 @@
-public class Student {
-    private String[] subjects;
+import java.util.ArrayList;
+import java.util.List;
 
-    public String[] getSubjects() {
-        return subjects;
+public class Student {
+    private List<String> subjects;
+    private List<Character> grades;
+
+    public Student(){
+        subjects = new ArrayList<>();
+        grades = new ArrayList<>();
     }
 
-    public void setSubjects(String[] subjects) {
-        this.subjects = subjects;
+    public void addSubject(String subject){
+        subjects.add(subject);
     }
 }

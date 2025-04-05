@@ -61,6 +61,8 @@ public class Class1 {
         // List<Integer> intItems = new ArrayList<>();
         // This is legal
 
+        // Note: String is essentially a List of Characters
+
         items.add("McMuffin");
         items.add("Americano");
         items.add("Milk");

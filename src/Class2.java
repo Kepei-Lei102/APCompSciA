@@ -8,6 +8,9 @@ public class Class2 {
         System.out.print(arr[1] + " ");
         System.out.print(arr[3]);
 
+        // Object Oriented Programming
+
+
     }
 
     public static void mcqQ3() {

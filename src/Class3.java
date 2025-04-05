@@ -7,5 +7,13 @@ public class Class3 {
 
         Student jason = new Student();
         jason.addSubject("Computer Science");
+        jason.addSubject("English");
+        jason.addSubject("Calculus");
+
+        jason.addGrade('A');
+        jason.addGrade('B');
+        jason.addGrade('C');
+
+        System.out.println("Jason's GPA is: " + jason.calculateGPA());
     }
 }

@@ -19,6 +19,9 @@ public class BaronP359 {
     }
 
     public static int numSymbols (String s) {
+
+        // I want to...
+
         int length = s.length();
         return length - numDigits(s) - numLetters(s);
     }

@@ -1,3 +1,6 @@
+import java.util.ArrayList;
+import java.util.List;
+
 public class Class3 {
     public static void main(String[] args) {
         String s = "ThisIsAPassword123!@#";
@@ -15,5 +18,18 @@ public class Class3 {
         jason.addGrade('C');
 
         System.out.println("Jason's GPA is: " + jason.calculateGPA());
+
+        Schedule jasonSchedule = new Schedule();
+        String[][] classes = {{"M", "E", "P", "Ec", "M", "E", "E", "E", "E"},
+                {"M", "E", "P", "Ec", "M", "E", "E", "E", "E"},
+                {"M", "E", "P", "Ec", "M", "E", "E", "E", "E"},
+                {"M", "E", "P", "Ec", "M", "E", "E", "E", "E"},
+                {"M", "E", "P", "Ec", "M", "E", "E", "E", "E"}};
+        jasonSchedule.addClass(classes);
+
+
+        int number = 5;
+        List<Integer> numbers = new ArrayList<>();
+        numbers.add(number); // Auto Boxing
     }
 }

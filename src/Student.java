@@ -1,13 +1,27 @@
 import java.util.ArrayList;
 import java.util.List;
 
+
+
 public class Student {
+    // Constants
+    // A special type of instance "variables"
+    public static final int MAX_SCORE = 100;
+
+    //Instance variables
     private List<String> subjects;
     private List<Character> grades;
+    private double height;
 
+    // Constructor
     public Student(){ // Instantiater
         subjects = new ArrayList<>();
         grades = new ArrayList<>();
+        height = 0;
+    }
+
+    public double getHeight() {
+        return height;
     }
 
     public void addSubject(String subject){

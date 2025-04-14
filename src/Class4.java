@@ -9,7 +9,7 @@ public class Class4 {
     //                 method name
     //                      parameter list
     public static void main(String[] args) {
-        Student jason = new Student();
+        Student jason = new Student(183.0, "Jason");
     }
 
     public int product(int n) {

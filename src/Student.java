@@ -12,22 +12,40 @@ public class Student {
     private List<String> subjects;
     private List<Character> grades;
     private double height;
+    private String name;
 
     // Constructor
-    public Student(){ // Instantiater
+    public Student(double height, String name){
         subjects = new ArrayList<>();
         grades = new ArrayList<>();
-        height = 0;
+        this.height = height;
+        this.name = name;
+    }
+    
+    public Student(List<String> subjects, List<Character> grades) {
+        this.subjects = subjects;
+        this.grades = grades;
+    }
+
+    // getter or accessor
+    public List<String> getSubjects() {
+        return subjects;
     }
 
     public double getHeight() {
         return height;
     }
 
+    public String getName() {
+        return name;
+    }
+
+    // Mutator method
     public void addSubject(String subject){
         subjects.add(subject);
     }
 
+    // Mutator method
     public void addGrade(char grade) {
         grades.add(grade);
     }

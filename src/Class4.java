@@ -36,6 +36,7 @@ public class Class4 {
 
         while (startIndex < 60) {
             if (isMinuteFree(period, startIndex)) {
+
                 int freeLength = 0;
                 //The amount of minutes free starting from startIndex
                 int endIndex = startIndex;
@@ -56,5 +57,30 @@ public class Class4 {
             }
         }
         return -1;
+    }
+
+    public void reserveBlock(int period, int startMinute, int duration) {
+
+    }
+
+    public boolean makeAppointment(int startPeriod, int endPeriod, int duration) {
+        int targetPeriod = startPeriod;
+        int startTime = -1;
+
+        while (targetPeriod <= endPeriod) {
+            startTime = findFreeBlock(targetPeriod, duration);
+            if (startTime >= 0) {
+                break;
+            } else {
+                targetPeriod ++;
+            }
+        }
+
+        if (startTime == -1) {
+            return false;
+        } else {
+            reserveBlock(targetPeriod, startTime, duration);
+            return true;
+        }
     }
 }

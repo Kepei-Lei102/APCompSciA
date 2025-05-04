@@ -19,7 +19,7 @@ public class Class3 {
         only when initiator is called
         initiator: new Student();
          */
-        Student jason = new Student(183.0, "Jason");
+        Student jason = new Student(183, 80, 18, "Jason");
         List<String> jasonSubjects = jason.getSubjects();
         // This line only assigns the "reference" of such variable
 

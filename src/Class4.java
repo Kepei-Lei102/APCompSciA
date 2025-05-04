@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.List;
 
 public class Class4 {
     // Class vs. Object
@@ -13,7 +14,15 @@ public class Class4 {
     //                 method name
     //                      parameter list
     public static void main(String[] args) {
-        Student jason = new Student(183.0, "Jason");
+        Person jason = new Student(178, 80, 18, "Jason");
+        Person someone = new Person(178, 80, 24);
+        Student kevin = new Person(189, 80, 18);
+        System.out.println(jason.isOverWeight());
+        System.out.println(someone.isOverWeight());
+
+        List<Integer> intList = new ArrayList<>();
+        intList.add(0);
+        intList.add(new Integer(0));
     }
 
     public int product(int n) {
@@ -82,5 +91,10 @@ public class Class4 {
             reserveBlock(targetPeriod, startTime, duration);
             return true;
         }
+    }
+
+    public int generateRandom(int lower, int upper) {
+        double x = Math.random();
+        return (int) (x * (upper - lower) + lower);
     }
 }

@@ -2,8 +2,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-
-public class Student {
+//Student is a subclass of a Person
+public class Student extends Person {
     // Constants
     // A special type of instance "variables"
     public static final int MAX_SCORE = 100;
@@ -11,20 +11,27 @@ public class Student {
     //Instance variables
     private List<String> subjects;
     private List<Character> grades;
-    private double height;
     private String name;
 
     // Constructor
-    public Student(double height, String name){
+    public Student(int height, int weight, int age, String name){
+        super(height, weight, age);
         subjects = new ArrayList<>();
         grades = new ArrayList<>();
         this.height = height;
         this.name = name;
     }
     
-    public Student(List<String> subjects, List<Character> grades) {
+    public Student(int height, int weight, int age, List<String> subjects, List<Character> grades) {
+        super(height, weight, age);
         this.subjects = subjects;
         this.grades = grades;
+    }
+    
+
+    @Override
+    public boolean isOverWeight(){
+        return weight / Math.pow((double)(height)/100, 2) > 27;
     }
 
     // getter or accessor
